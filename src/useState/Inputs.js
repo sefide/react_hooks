@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import './App.css';
 
 const useInput = (initValue, validator) => {
   const [value, setValue] = useState(initValue);
@@ -21,7 +20,7 @@ const useInput = (initValue, validator) => {
   return { value, onChange };
 };
 
-const App = () => {
+const Inputs = () => {
   const maxLength = (value) => value.length <= 10;
   const name = useInput("Mr.", maxLength);
 
@@ -34,4 +33,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Inputs;

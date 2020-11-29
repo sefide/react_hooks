@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import App from './App';
-// import AppUgly from './AppUgly';
-import Tabs from './Tabs';
+import AppUgly from './useState/AppUgly';
+import Inputs from './useState/Inputs';
+import Tabs from './useState/Tabs';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Tabs />
+    <AppUgly />
   </React.StrictMode>,
   document.getElementById('root')
 );
