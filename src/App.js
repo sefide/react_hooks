@@ -1,25 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from "react";
 import './App.css';
 
-function App() {
+const useInput = (initValue, validator) => {
+  const [value, setValue] = useState(initValue);
+
+  const onChange = (event) => {
+    const {
+      target: { value }
+    } = event;
+    let willUpdate = true;
+
+    if (typeof validator === "function") {
+      willUpdate = validator(value);
+    }
+
+    if (willUpdate) {
+      setValue(value);
+    }
+  };
+  return { value, onChange };
+};
+
+const App = () => {
+  const maxLength = (value) => value.length <= 7;
+  const name = useInput("Mr.", maxLength);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Hello {name.value} </h1>
+      {/* ...name == value={name.value] onChange={name.onChange}  */}
+      <input placeholder="Name" {...name}></input>
     </div>
   );
-}
+};
 
 export default App;
