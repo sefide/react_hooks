@@ -22,7 +22,7 @@ const useInput = (initValue, validator) => {
 };
 
 const App = () => {
-  const maxLength = (value) => value.length <= 7;
+  const maxLength = (value) => value.length <= 10;
   const name = useInput("Mr.", maxLength);
 
   return (

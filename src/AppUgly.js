@@ -6,7 +6,7 @@ class AppUgly extends React.Component {
     };
   
     render() {
-      const item = this.state;
+      const item = this.state.item;
   
       return (
         <div className="AppUgly">
@@ -19,7 +19,7 @@ class AppUgly extends React.Component {
   
     incrementItem = () => {
       this.setState((state) => {
-        console.log(state);
+          
         return {
           item: state.item + 1
         };
@@ -28,7 +28,6 @@ class AppUgly extends React.Component {
   
     decrementItem = () => {
       this.setState((state) => {
-        console.log(state);
   
         return {
           item: state.item - 1
