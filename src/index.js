@@ -7,10 +7,13 @@ import Tabs from './useState/Tabs';
 import App from './useEffect/App';
 import Titles from './useEffect/Titles';
 import Ref from './useEffect/Click';
+import Confirm from './useEffect/Confirms';
+import PreventLeave from './useEffect/PreventLeave';
+import BeforeLeave from './useEffect/BeforeLeave';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Ref />
+    <BeforeLeave />
   </React.StrictMode>,
   document.getElementById('root')
 );

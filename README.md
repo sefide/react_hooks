@@ -27,5 +27,20 @@ componentWillUnmount, componentDidmount, componentWillUpdate 함수와 비슷한
 <br> (초기화하지 않을 시, 다음과 같은 에러 발생 => Uncaught ReferenceError: Cannot access 'number' before initialization) 
 
 
-- 반환 메소드 (func) : componentWillUnmount
+- 반환 메소드 (func) : componentWillUnMount시 수행할 function을 반환한다.
 
+
+useRef
+------ 
+모든 Component는 reference element를 가지는데 useRef를 이용해 reference 값을 조정할 수 있다.
+``` const ref = useRef(); ```
+``` <tag ref = {ref}/> ```
+
+
+---
+
+Issue
+------
+issue1. React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?
+
+=> https://ko.reactjs.org/docs/hooks-rules.html 참조
