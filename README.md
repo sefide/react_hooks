@@ -5,15 +5,18 @@ Hooks
 movie_app_2020에서는 state를 관리하기 위해서 class component를 사용헀다. 
 Hooks를 이용하면 함수형 컴포넌트에서도 state를 관리할 수 있다.
 
----
 
-#### useState
+
+
+useState
+------
 ``` const [value, setValue] = useState(initialValue); ```
 
 state 변수인 value와 value 값을 설정하는 setValue 메소드를 동시에 제공한다.
 useState의 인자로는 value의 초기값으로 설정한다.
 
-#### useEffect
+useEffect
+------
 componentWillUnmount, componentDidmount, componentWillUpdate 함수와 비슷한 역할을 한다.
 
 ``` function func = useEffect(effect, deps) ```
