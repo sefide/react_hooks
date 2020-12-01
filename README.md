@@ -32,10 +32,11 @@ componentWillUnmount, componentDidmount, componentWillUpdate 함수와 비슷한
 
 useRef
 ------ 
-모든 Component는 reference element를 가지는데 useRef를 이용해 reference 값을 조정할 수 있다.
-``` const ref = useRef(); ```
-``` <tag ref = {ref}/> ```
+모든 Component는 reference element를 가지는데 useRef를 이용해 reference 값을 조정할 수 있다. 
+<br> ``` const ref = useRef(); ```
+<br> ``` <tag ref = {ref}/> ```
 
+<br>
 
 ---
 
