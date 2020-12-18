@@ -10,11 +10,12 @@ import Ref from './useEffect/Click';
 import Confirm from './useEffect/Confirms';
 import PreventLeave from './useEffect/PreventLeave';
 import BeforeLeave from './useEffect/BeforeLeave';
+import FadeIn from './useEffect/FadeIn';
 import AxiosEx from "./axios/AxiosEx";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AxiosEx />
+    <FadeIn />
   </React.StrictMode>,
   document.getElementById('root')
 );
