@@ -11,11 +11,12 @@ import Confirm from './useEffect/Confirms';
 import PreventLeave from './useEffect/PreventLeave';
 import BeforeLeave from './useEffect/BeforeLeave';
 import FadeIn from './useEffect/FadeIn';
+import Network from './useEffect/Network';
 import AxiosEx from "./axios/AxiosEx";
 
 ReactDOM.render(
   <React.StrictMode>
-    <FadeIn />
+    <Network />
   </React.StrictMode>,
   document.getElementById('root')
 );
