@@ -11,16 +11,35 @@ const useFullScreen = (callBack) => {
 
     const triggerFullScreen = () => {
         if(element.current) {
-            element.current.requestFullscreen();
+            if(element.current.requestFullscreen) {
+                element.current.requestFullscreen();
+            } else if(element.current.mozRequestFullScreen) {
+                element.current.mozRequestFullScreen();
+            } else if(element.current.webkitRequestFullScreen) {
+                element.current.webkitRequestFullScreen();
+            } else if(element.current.msRequestFullScreen){
+                element.current.msRequestFullScreen();
+            }
+
             document.getElementById("img").style.width="1200px";
+            checkFull(true);
         }
-        checkFull(true);
     }
 
     const exitFullScreen = () => {
         document.exitFullscreen();
-        document.getElementById("img").style.width="300px";
 
+        if(element.current.exitFullscreen) {
+            element.current.exitFullscreen();
+        } else if(element.current.mozCancelFullScreen) {
+            element.current.mozCancelFullScreen();
+        } else if(element.current.webkitExitFullScreen) {
+            element.current.webkitExitFullScreen();
+        } else if(element.current.msExitFullScreen){
+            element.current.msExitFullScreen();
+        }
+        
+        document.getElementById("img").style.width="300px";
         checkFull(false);
     }
     return {element, triggerFullScreen, exitFullScreen};
