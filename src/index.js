@@ -13,11 +13,12 @@ import BeforeLeave from './useEffect/BeforeLeave';
 import FadeIn from './useEffect/FadeIn';
 import Network from './useEffect/Network';
 import Scroll from './useEffect/Scroll';
+import FullScreen from './useEffect/FullScreen';
 import AxiosEx from "./axios/AxiosEx";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Scroll />
+    <FullScreen />
   </React.StrictMode>,
   document.getElementById('root')
 );
