@@ -14,11 +14,12 @@ import FadeIn from './useEffect/FadeIn';
 import Network from './useEffect/Network';
 import Scroll from './useEffect/Scroll';
 import FullScreen from './useEffect/FullScreen';
+import Notification from './useEffect/Notification';
 import AxiosEx from "./axios/AxiosEx";
 
 ReactDOM.render(
   <React.StrictMode>
-    <FullScreen />
+    <Notification />
   </React.StrictMode>,
   document.getElementById('root')
 );
