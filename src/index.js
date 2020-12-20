@@ -12,11 +12,12 @@ import PreventLeave from './useEffect/PreventLeave';
 import BeforeLeave from './useEffect/BeforeLeave';
 import FadeIn from './useEffect/FadeIn';
 import Network from './useEffect/Network';
+import Scroll from './useEffect/Scroll';
 import AxiosEx from "./axios/AxiosEx";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Network />
+    <Scroll />
   </React.StrictMode>,
   document.getElementById('root')
 );
